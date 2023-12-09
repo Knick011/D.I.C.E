@@ -3,16 +3,58 @@
     <title>Dice Roll</title>
     <script>
         function rollDice() {
-            var result = Math.floor(Math.random() * 6) + 1;
-            document.getElementById("diceResult").innerHTML = "You rolled a " + result + "!";
+        	var result = Math.floor(Math.random() * 6) + 1;
+            var message = "";
+
+            if (result == 1) {
+                message = "Damn that's really unlucky! You rolled a " + result + ".Better luck next time";
+            } 
+            if (result == 2) {
+                message = "That's really unlucky! You rolled a " + result + ".Better luck next time";
+            }
+            if (result == 3) {
+                message = "oops unlucky! You rolled a " + result + ". Better luck next time";
+                }
+            if (result == 4) {
+                message = "Not bad! You rolled a " + result + ". You're getting there";
+                }
+                
+            if (result == 5) {
+                message = "Wow you're lucky. You rolled a " + result + ". So close to winning";
+                }
+            if (result == 6) {
+                message = "CONGRATULATIONS. You rolled a " + result + ". You're a winner.";
+                }
+            
+            
+            
+
+            document.getElementById("diceResult").innerHTML = message;
+   
         }
     </script>
 </head>
 <body>
 
-<h1>DICE</h1>
-<button onclick="rollDice()">Test your luck?</button>
-<p id="diceResult"></p>
+<h1 style="font-family:courier;font-size:1000%;text-align:center;">D.I.C.E</h1>
+<button onclick="rollDice()" 
+
+	style=";color:white;
+			background-color:black;
+            margin: 50px 225px;
+            padding: 15px 20px;
+            font-family:courier;
+            font-size: 32px">
+     
+      
+
+
+            Test your luck?</button>
+            
+
+
+
+<p style="font-family:courier;font-size:200%;text-align:center;" id="diceResult"></p>
 
 </body>
 </html>
