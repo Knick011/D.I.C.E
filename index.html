@@ -34,6 +34,9 @@
     <script>
         
         function rollDice() {
+              var diceResult = document.getElementById("diceResult");
+            diceResult.style.display = 'block'; // Reset to default display style
+
             var result = Math.floor(Math.random() * 6) + 1;
             var message = "";
   if (result == 1) {
@@ -57,6 +60,10 @@
                 }
 
             document.getElementById("diceResult").innerHTML = message;
+            setTimeout(function() {
+                diceResult.style.display = 'none';
+            }, 5000);
+            
         } 
             
         
