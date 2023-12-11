@@ -1,12 +1,42 @@
 <html>
 <head>
-    <title>Dice Roll</title>
-    <script>
-        function rollDice() {
-        	var result = Math.floor(Math.random() * 6) + 1;
-            var message = "";
+    <title>D.I.C.E</title>
+    <style>
+        .centered-container {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
 
-            if (result == 1) {
+        .centered-button {
+            color: black;
+            background-color: white;
+            padding: 15px 20px;
+            font-family: courier;
+            font-size: 32px;
+            border: 2px solid; 
+            cursor: pointer;
+            margin-bottom: 20px;  */
+        }
+
+        .centered-button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        #diceResult {
+            font-family: courier;
+            font-size: 200%;
+        }
+    </style>
+    <script>
+        
+        function rollDice() {
+            var result = Math.floor(Math.random() * 6) + 1;
+            var message = "";
+  if (result == 1) {
                 message = "Damn that's really unlucky! You rolled a " + result + ".Better luck next time";
             } 
             if (result == 2) {
@@ -25,46 +55,23 @@
             if (result == 6) {
                 message = "CONGRATULATIONS. You rolled a " + result + ". You're a winner.";
                 }
-            
-            
-            
 
             document.getElementById("diceResult").innerHTML = message;
-   
-        }
+        } 
+            
+        
     </script>
 </head>
 <body>
 
 <h1 style="font-family:courier;font-size:1000%;text-align:center;">D.I.C.E</h1>
-<button onclick="rollDice()" 
 
-
-	 
-            
-	style=";color:white;
-			background-color:black;
-            margin: 50px 225px;
-            padding: 15px 20px;
-            font-family:courier;
-            font-size: 32px;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);"
-            >
-     
-     
-      
-
-
-            Test your luck?</button>
-            
-
-
-
-<p style="font-family:courier;font-size:200%;text-align:center;" id="diceResult"></p>
+<div class="centered-container">
+    <button onclick="rollDice()" class="centered-button">
+        Test your luck?
+    </button>
+    <p id="diceResult"></p>
+</div>
 
 </body>
 </html>
-
