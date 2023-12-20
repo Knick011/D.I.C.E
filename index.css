@@ -1,0 +1,28 @@
+.centered-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.centered-button {
+    color: black;
+    background-color: white;
+    padding: 15px 20px;
+    font-family: courier;
+    font-size: 32px;
+    border: 2px solid; 
+    cursor: pointer;
+    margin-bottom: 20px;  */
+}
+
+.centered-button:hover {
+    background-color: black;
+    color: white;
+}
+
+#diceResult {
+    font-family: courier;
+    font-size: 200%;
+}
